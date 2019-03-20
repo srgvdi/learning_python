@@ -1,7 +1,7 @@
 def is_perfect(number):
     sum_of_divisors = 1
     i = 2
-    while i < number:
+    while i < number/2 + 1:
         if number % i == 0:
             sum_of_divisors += i
         i += 1
@@ -9,7 +9,7 @@ def is_perfect(number):
 
 
 limit = int(input("Enter a number"))
-print("Below are all perfect numbers till 10000")
+print("Below are all perfect numbers till " + str(limit))
 n = 2
 for n in range(limit):
     if is_perfect(n):
